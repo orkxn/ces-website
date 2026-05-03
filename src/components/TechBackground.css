@@ -1,0 +1,109 @@
+/* ====== Tech Background ====== */
+.tech-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+
+  /* Subtle dot grid */
+  background-image: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.07) 1px,
+    transparent 1px
+  );
+  background-size: 40px 40px;
+}
+
+/* ====== Circuit SVG ====== */
+.tech-bg__circuit {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  color: rgba(74, 158, 255, 0.15);
+  opacity: 0;
+  animation: circuit-fade 3s ease-out 0.5s forwards;
+}
+
+@keyframes circuit-fade {
+  to { opacity: 1; }
+}
+
+/* ====== Floating Symbols ====== */
+.tech-bg__symbol {
+  position: absolute;
+  font-family: 'DM Sans', monospace;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.08);
+  user-select: none;
+  animation: symbol-float 20s ease-in-out infinite;
+  font-size: 0.9rem;
+}
+
+@keyframes symbol-float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  25%      { transform: translateY(-12px) rotate(2deg); }
+  50%      { transform: translateY(-6px) rotate(-1deg); }
+  75%      { transform: translateY(-18px) rotate(1deg); }
+}
+
+/* Positioning & staggered timing for each symbol */
+.tech-bg__symbol--1 {
+  top: 12%;
+  left: 8%;
+  font-size: 1rem;
+  animation-delay: 0s;
+  animation-duration: 22s;
+}
+
+.tech-bg__symbol--2 {
+  top: 25%;
+  right: 12%;
+  animation-delay: -3s;
+  animation-duration: 18s;
+}
+
+.tech-bg__symbol--3 {
+  top: 55%;
+  left: 5%;
+  font-size: 1.1rem;
+  animation-delay: -7s;
+  animation-duration: 24s;
+}
+
+.tech-bg__symbol--4 {
+  top: 70%;
+  right: 8%;
+  animation-delay: -11s;
+  animation-duration: 20s;
+}
+
+.tech-bg__symbol--5 {
+  top: 40%;
+  left: 85%;
+  animation-delay: -5s;
+  animation-duration: 26s;
+}
+
+.tech-bg__symbol--6 {
+  top: 85%;
+  left: 20%;
+  animation-delay: -9s;
+  animation-duration: 19s;
+}
+
+.tech-bg__symbol--7 {
+  top: 15%;
+  left: 60%;
+  animation-delay: -13s;
+  animation-duration: 23s;
+}
+
+.tech-bg__symbol--8 {
+  top: 65%;
+  left: 45%;
+  animation-delay: -16s;
+  animation-duration: 21s;
+}

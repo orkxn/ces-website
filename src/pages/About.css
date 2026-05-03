@@ -1,0 +1,128 @@
+/* ====== Page Hero (shared across sub-pages) ====== */
+.page-hero {
+  padding-top: calc(var(--header-height) + 80px);
+  padding-bottom: 40px;
+  text-align: center;
+}
+
+.page-hero__title {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  margin-bottom: 12px;
+}
+
+.page-hero__subtitle {
+  font-size: 1.05rem;
+  color: var(--clr-white-muted);
+}
+
+/* ====== About Content ====== */
+.about__content {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.about__text p {
+  color: var(--clr-white-muted);
+  margin-top: 16px;
+  line-height: 1.8;
+  font-size: 0.95rem;
+}
+
+/* Stats */
+.about__stats {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.stat {
+  padding: 24px;
+  background: var(--clr-black-card);
+  border: 1px solid var(--clr-black-border);
+  border-radius: var(--border-radius);
+  text-align: center;
+  transition: border-color var(--transition-smooth);
+}
+
+.stat:hover {
+  border-color: var(--clr-yellow);
+}
+
+.stat__value {
+  display: block;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--clr-yellow);
+}
+
+.stat__label {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--clr-white-muted);
+  margin-top: 4px;
+}
+
+/* Mission Cards */
+.about-mission {
+  background: rgba(20, 20, 20, 0.85);
+}
+
+.about__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  margin-top: 16px;
+}
+
+.about-card {
+  padding: 32px;
+  background: var(--clr-black-card);
+  border: 1px solid var(--clr-black-border);
+  border-radius: var(--border-radius);
+  transition: all var(--transition-smooth);
+}
+
+.about-card:hover {
+  border-color: var(--clr-yellow);
+  transform: translateY(-4px);
+}
+
+.about-card__icon {
+  color: var(--clr-yellow);
+  margin-bottom: 16px;
+}
+
+.about-card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.about-card p {
+  font-size: 0.9rem;
+  color: var(--clr-white-muted);
+  line-height: 1.7;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about__content {
+    grid-template-columns: 1fr;
+  }
+
+  .about__stats {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .stat {
+    flex: 1;
+    min-width: 120px;
+  }
+}

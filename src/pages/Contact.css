@@ -1,0 +1,84 @@
+.contact__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
+
+.contact__list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.contact-item {
+  padding: 20px 24px;
+  background: var(--clr-black-card);
+  border: 1px solid var(--clr-black-border);
+  border-radius: var(--border-radius);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: border-color var(--transition-smooth);
+}
+
+.contact-item:hover {
+  border-color: var(--clr-yellow);
+}
+
+.contact-item__name {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--clr-white-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.contact-item__email {
+  font-size: 1rem;
+  color: var(--clr-yellow);
+  font-weight: 500;
+}
+
+.contact-item__email:hover {
+  text-decoration: underline;
+}
+
+.contact__socials {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.social-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 24px;
+  background: var(--clr-black-card);
+  border: 1px solid var(--clr-black-border);
+  border-radius: var(--border-radius);
+  transition: all var(--transition-smooth);
+}
+
+.social-card:hover {
+  border-color: var(--clr-yellow);
+  transform: translateX(4px);
+}
+
+.social-card__platform {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.social-card__handle {
+  font-size: 0.9rem;
+  color: var(--clr-yellow);
+}
+
+@media (max-width: 768px) {
+  .contact__grid {
+    grid-template-columns: 1fr;
+  }
+}
