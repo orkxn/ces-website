@@ -19,7 +19,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Set up Node.js version
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: '24.x'
 
@@ -33,7 +33,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: node-app
-          path: .
+          path: dist # Sadece build edilmiş dosyaları gönderiyoruz
 
   deploy:
     runs-on: ubuntu-latest
@@ -62,4 +62,3 @@ jobs:
           app-name: 'cescankaya'
           slot-name: 'Production'
           package: .
-          
