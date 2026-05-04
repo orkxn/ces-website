@@ -2,8 +2,8 @@ import { useFadeIn } from '../hooks/useFadeIn';
 import './Contact.css';
 
 const contacts = [
-  { name: 'Topluluk Başkanı', email: 'baskan@cescankaya.com' },
-  { name: 'Komite Başkanı', email: 'komite@cescankaya.com' },
+  { name: 'Topluluk E-postası', email: 'cescankaya@gmail.com' },
+  { name: 'Topluluk Başkanı', email: 'kaptanemirhan.04@gmail.com' },
 ];
 
 const socials = [
